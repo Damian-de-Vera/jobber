@@ -10,7 +10,7 @@ datasource db {
 
 
 model User {
-    is Int @default(autoincrement()) @id
+    id Int @default(autoincrement()) @id
     email String @unique
     password String
 }
