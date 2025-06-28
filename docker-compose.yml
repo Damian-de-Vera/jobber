@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: jobber-auth
+      POSTGRES_USER: jobber-auth
+      
