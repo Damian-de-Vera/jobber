@@ -40,6 +40,7 @@ export class AuthService {
       if (!isAuthenticated) throw new UnauthorizedException();
       return storedUser;
     } catch (e) {
+      console.log(e);
       throw new UnauthorizedException('Credentials are incorrect');
     }
   }
