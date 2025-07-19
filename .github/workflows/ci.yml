@@ -32,7 +32,7 @@ jobs:
           cache: 'npm'
 
       - name: Setup proto
-      - uses: arduino/setup-protoc@v3.0.0
+        uses: arduino/setup-protoc@v3.0.0
 
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
