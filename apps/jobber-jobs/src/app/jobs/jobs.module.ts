@@ -1,10 +1,13 @@
 import { Module } from '@nestjs/common';
 import { FibonacciJob } from './fibonacci.job';
+import { DiscoveryModule } from '@golevelup/nestjs-discovery';
+import { JobsService } from './jobs.service';
+import { JobsResolver } from './jobs.resolver';
 
 @Module({
-  imports: [],
+  imports: [DiscoveryModule],
   controllers: [],
-  providers: [FibonacciJob],
+  providers: [FibonacciJob, JobsService, JobsResolver],
   exports: [],
 })
 export class JobsModule {}
